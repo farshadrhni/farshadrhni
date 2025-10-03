@@ -40,9 +40,9 @@ University of Florence (Italy) & Universitat Politècnica de Catalunya (UPC), Sp
 
 ### 📫 Contact & Connect
 
-<div style="display: flex; align-items: flex-start; gap: 50px;">
+<div style="display: flex; flex-wrap: wrap; gap: 50px;">
 
-<div>
+<div style="flex: 1; min-width: 250px;">
 **📬 Get in Touch**<br>
 Email: <a href="mailto:farshad.civil.rhni@egmail.com">farshad.civil.rhni@egmail.com</a><br>
 <!-- Academic Email: <a href="mailto:farshad.rahmani@eng.uk.ac.ir">farshad.rahmani@eng.uk.ac.ir</a><br> -->
@@ -50,7 +50,7 @@ LinkedIn: <a href="https://www.linkedin.com/in/farshad-rahmani-58b71214b">Farsha
 Website: <a href="https://farshadrhni.github.io/">farshadrhni.github.io</a>
 </div>
 
-<div style="margin-left: auto;">
+<div style="flex: 1; min-width: 250px;">
 **🌐 Connect with Me**<br>
 <a href="https://www.linkedin.com/in/farshad-rahmani-58b71214b">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white">
@@ -73,7 +73,6 @@ Website: <a href="https://farshadrhni.github.io/">farshadrhni.github.io</a>
 </div>
 
 </div>
-
 
 ---
 
