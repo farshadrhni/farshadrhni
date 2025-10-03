@@ -38,14 +38,6 @@ University of Florence (Italy) & Universitat Politècnica de Catalunya (UPC), Sp
 
 ---
 
-### 💻 Computational Mechanics Codes
-- **Finite Element Analysis (FEA)** – MATLAB, Python, and Julia scripts for beam, plate, and shell simulations  
-- **Isogeometric Analysis (IGA)** – MATLAB/Octave codes for structural simulations of FGMs and shells  
-- **High-performance Numerical Simulations** – Fortran/C++ routines for large-scale linear & nonlinear problems  
-- **Material Modeling** – Codes for composites, functionally graded materials, and smart materials  
-
----
-
 ### 📫 Get in Touch
 - Email: [farshad.civil.rhni@egmail.com](mailto:farshad.civil.rhni@egmail.com)  
 <!-- - Academic Email: [farshad.rahmani@eng.uk.ac.ir](mailto:farshad.rahmani@eng.uk.ac.ir) -->
