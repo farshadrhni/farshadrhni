@@ -58,7 +58,7 @@ I am a researcher in **computational mechanics**, developing simulation methods 
       <img src="https://github-readme-stats.vercel.app/api?username=farshadrhni&show_icons=true&theme=radical&hide_border=true" alt="GitHub stats" />
     </td>
     <td align="center" valign="top">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=farshadrhni&layout=compact&langs_count=8&theme=radical&hide_border=true" alt="Most used languages" />
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=farshadrhni&layout=pie&langs_count=8&theme=radical&hide_border=true" alt="Most used languages" />
     </td>
   </tr>
 </table>
