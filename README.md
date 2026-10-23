@@ -1,52 +1,80 @@
-# Farshad Rahmani 👋
-**Computational Mechanics Researcher | FEA & Isogeometric Analysis | Structural Mechanics**
+<h1 align="center">Farshad Rahmani</h1>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/farshad-rahmani-58b71214b)
-[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-4285F4?style=flat&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=XN_h7GIAAAAJ&hl=en)
-[![ResearchGate](https://img.shields.io/badge/ResearchGate-00CCBB?style=flat&logo=researchgate&logoColor=white)](https://www.researchgate.net/profile/Farshad-Rahmani-2)
-[![ORCID](https://img.shields.io/badge/ORCID-0000--0002--6926--5651-A3CE36?style=flat&logo=orcid&logoColor=white)](https://orcid.org/0000-0002-6926-5651)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/farshadrhni)
-[![Website](https://img.shields.io/badge/Website-FF7139?style=flat&logo=firefox&logoColor=white)](https://farshadrhni.github.io/)
+<p align="center">
+  <b>Computational Mechanics Researcher</b><br>
+  Finite Element Analysis · Isogeometric Analysis · Structural Mechanics
+</p>
 
----
-
-## Hi there, welcome to my profile! 👋
-
-I am a researcher in **Computational Mechanics**, specializing in advanced simulation and numerical methods, including **Finite Element Analysis (FEA)** and **Isogeometric Analysis (IGA)**.  
-
-🏫 **Affiliation:**  
-University of Florence (Italy) & Universitat Politècnica de Catalunya (UPC), Spain — International Centre for Numerical Methods in Engineering (CIMNE).
+<p align="center">
+  <a href="https://www.linkedin.com/in/farshad-rahmani-58b71214b"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://scholar.google.com/citations?user=XN_h7GIAAAAJ&hl=en"><img src="https://img.shields.io/badge/Google%20Scholar-4285F4?style=flat&logo=google-scholar&logoColor=white" alt="Google Scholar"></a>
+  <a href="https://www.researchgate.net/profile/Farshad-Rahmani-2"><img src="https://img.shields.io/badge/ResearchGate-00CCBB?style=flat&logo=researchgate&logoColor=white" alt="ResearchGate"></a>
+  <a href="https://orcid.org/0000-0002-6926-5651"><img src="https://img.shields.io/badge/ORCID-0000--0002--6926--5651-A3CE36?style=flat&logo=orcid&logoColor=white" alt="ORCID"></a>
+  <a href="https://farshadrhni.github.io/"><img src="https://img.shields.io/badge/Website-FF7139?style=flat&logo=firefox&logoColor=white" alt="Website"></a>
+  <a href="mailto:farshad.civil.rhni@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" alt="Email"></a>
+</p>
 
 ---
 
-### 💻 Research & Methodology
-- **Linear & Nonlinear Analysis** of solid and structural mechanics problems  
-- **Finite Element Analysis (FEA)** for beams, plates, and shell structures  
-- **Isogeometric Analysis (IGA)** for beams, plates, and shell structures  
-- **Material Modeling** including composites, functionally graded materials (FGMs), and smart materials  
-- **Structural Optimization** techniques for efficient design and performance
+## About
+
+I am a researcher in **computational mechanics**, developing simulation methods for advanced structures and materials. My work focuses on **Finite Element Analysis (FEA)** and **Isogeometric Analysis (IGA)** for beams, plates and shells, with an emphasis on geometric nonlinearity and smart-material behavior.
+
+🏫 **Affiliations**
+- University of Florence, Italy
+- Universitat Politècnica de Catalunya (UPC), Spain: International Centre for Numerical Methods in Engineering (CIMNE)
 
 ---
 
-### 🛠️ Languages & Tools
-![MATLAB](https://img.shields.io/badge/MATLAB-F2A900?style=flat&logo=mathworks&logoColor=white)
-![Octave](https://img.shields.io/badge/Octave-DA5B0B?style=flat&logo=gnu-octave&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![Julia](https://img.shields.io/badge/Julia-9558B2?style=flat&logo=julia&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)
-![Fortran](https://img.shields.io/badge/Fortran-4EAA25?style=flat&logo=fortran&logoColor=white)
+## Research Interests
+
+- **Nonlinear structural mechanics**: geometrically nonlinear beam, plate and shell formulations
+- **Isogeometric Analysis**: NURBS-based discretizations, including collocation methods
+- **Smart materials**: shape-memory alloys/polymers, thermo-mechanical coupling, thermoviscoelasticity
+- **Advanced materials**: composites and functionally graded materials (FGMs)
+- **Structural optimization** for efficient design and performance
 
 ---
 
-### 📫 Contact & Connect
+## Tools
 
-| 📬 Get in Touch | 🌐 Connect with Me |
-|-----------------|------------------|
-| Email: [farshad.civil.rhni@egmail.com](mailto:farshad.civil.rhni@egmail.com) <br> <!-- Academic Email: [farshad.rahmani@eng.uk.ac.ir](mailto:farshad.rahmani@eng.uk.ac.ir) --> | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/farshad-rahmani-58b71214b) [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/farshadrhni) [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-4285F4?style=flat&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=XN_h7GIAAAAJ&hl=en) <br> [![ResearchGate](https://img.shields.io/badge/ResearchGate-00CCBB?style=flat&logo=researchgate&logoColor=white)](https://www.researchgate.net/profile/Farshad-Rahmani-2) [![ORCID](https://img.shields.io/badge/ORCID-0000--0002--6926--5651-A3CE36?style=flat&logo=orcid&logoColor=white)](https://orcid.org/0000-0002-6926-5651) [![Website](https://img.shields.io/badge/Website-FF7139?style=flat&logo=firefox&logoColor=white)](https://farshadrhni.github.io/) |
+<p>
+  <img src="https://img.shields.io/badge/MATLAB-F2A900?style=flat&logo=mathworks&logoColor=white" alt="MATLAB">
+  <img src="https://img.shields.io/badge/Octave-DA5B0B?style=flat&logo=gnu-octave&logoColor=white" alt="Octave">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Julia-9558B2?style=flat&logo=julia&logoColor=white" alt="Julia">
+  <img src="https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white" alt="C++">
+  <img src="https://img.shields.io/badge/Fortran-4EAA25?style=flat&logo=fortran&logoColor=white" alt="Fortran">
+  <img src="https://img.shields.io/badge/LaTeX-008080?style=flat&logo=latex&logoColor=white" alt="LaTeX">
+</p>
 
 ---
 
-### 📊 GitHub Stats
-![Farshad's GitHub Stats](https://github-readme-stats.vercel.app/api?username=farshadrhni&show_icons=true&theme=radical)
+## GitHub Activity
 
-![Top Languages](https://vercel.app)
+<table>
+  <tr>
+    <td align="center" valign="top">
+      <img src="https://github-readme-stats.vercel.app/api?username=farshadrhni&show_icons=true&theme=radical&hide_border=true" alt="GitHub stats" />
+    </td>
+    <td align="center" valign="top">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=farshadrhni&layout=compact&langs_count=8&theme=radical&hide_border=true" alt="Most used languages" />
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=farshadrhni&theme=radical&hide_border=true" alt="Contribution streak" />
+</p>
+
+---
+
+## Publications
+
+Full list on [Google Scholar](https://scholar.google.com/citations?user=XN_h7GIAAAAJ&hl=en) and [ORCID](https://orcid.org/0000-0002-6926-5651).
+
+---
+
+## Contact
+
+I am open to research collaborations in computational mechanics and numerical methods. Reach me by [email](mailto:farshad.civil.rhni@gmail.com) or on [LinkedIn](https://www.linkedin.com/in/farshad-rahmani-58b71214b).
