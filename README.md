@@ -50,18 +50,11 @@ I am a researcher in **computational mechanics**, developing simulation methods 
 
 ---
 
-## GitHub Activity
+## Languages Used (public and private repositories)
 
-<table>
-  <tr>
-    <td align="center" valign="top">
-      <img src="https://YOUR-DOMAIN.vercel.app/api?username=farshadrhni&show_icons=true&count_private=true&theme=radical&hide_border=true" alt="GitHub stats" />
-    </td>
-    <td align="center" valign="top">
-      <img src="https://YOUR-DOMAIN.vercel.app/api/top-langs/?username=farshadrhni&layout=pie&langs_count=8&theme=radical&hide_border=true" alt="Most used languages" />
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="./languages.svg" alt="Most used languages across all repositories" />
+</p>
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=farshadrhni&theme=radical&hide_border=true" alt="Contribution streak" />
