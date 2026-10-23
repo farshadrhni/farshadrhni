@@ -50,7 +50,7 @@ I am a researcher in **computational mechanics**, developing simulation methods 
 
 ---
 
-## Languages Used (public and private repositories)
+## Languages Used
 
 <p align="center">
   <img src="./languages.svg" alt="Most used languages across all repositories" />
