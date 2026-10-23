@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="230" viewBox="0 0 495 230">
+<style>.t{font:400 13px 'Segoe UI',Ubuntu,Sans-Serif;fill:#a9fef7}.h{font:600 18px 'Segoe UI',Ubuntu,Sans-Serif;fill:#fe428e}</style>
+<rect x="0.5" y="0.5" width="494" height="229" rx="4.5" fill="#141321"/>
+<text x="25" y="35" class="h">Most Used Languages</text>
+<circle cx="110" cy="115" r="64.0" fill="none" stroke="#3572A5" stroke-width="32"/>
+<rect x="235" y="52" width="12" height="12" rx="3" fill="#3572A5"/><text x="255" y="62" class="t">Python</text><text x="440" y="62" class="t" text-anchor="end">100.0%</text>
+</svg>
