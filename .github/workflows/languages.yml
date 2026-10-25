@@ -1,6 +1,11 @@
 name: Update language chart
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - generate_languages.py
+      - .github/workflows/languages.yml
   schedule:
     - cron: "0 3 * * *"   # daily at 03:00 UTC
   workflow_dispatch:       # lets you run it manually from the Actions tab
@@ -21,7 +26,7 @@ jobs:
       - name: Generate chart
         run: python generate_languages.py
         env:
-          GH_TOKEN: ${{ secrets.LANG_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           GH_USER: farshadrhni
 
       - name: Commit changes
@@ -30,3 +35,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add languages.svg languages.html
           git diff --staged --quiet || (git commit -m "Update language chart" && git push)
+
