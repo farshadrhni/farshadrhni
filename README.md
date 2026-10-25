@@ -14,7 +14,7 @@
 
 ## About
 
-I work in computational mechanics, developing numerical formulations and research software for structural and material modelling. My work connects continuum mechanics, constitutive modelling, and numerical implementation, with a particular focus on nonlinear structures and coupled thermomechanical problems.
+I am a computational mechanics researcher interested in numerical methods for structural and material modelling. I develop solvers for beam, plate, and shell structures using the finite element method (FEM), Galerkin isogeometric analysis (IGA), and isogeometric collocation (IGA-C). My research focuses on nonlinear structural mechanics, constitutive modelling, and coupled thermomechanical problems.
 
 ## Research & Development
 
