@@ -16,12 +16,6 @@
 
 I am a computational mechanics researcher interested in numerical methods for structural and material modelling. I develop solvers for beam, plate, and shell structures using the finite element method (FEM), Galerkin isogeometric analysis (IGA), and isogeometric collocation (IGA-C). My research focuses on nonlinear structural mechanics, constitutive modelling, and coupled thermomechanical problems.
 
-## Contact
-
-Open to research collaborations in computational mechanics, numerical methods, and scientific software development.
-
-[Email](mailto:farshad.civil.rhni@gmail.com) · [LinkedIn](https://www.linkedin.com/in/farshad-rahmani-58b71214b)
-
 ## Research & Development
 
 - **Structural mechanics** — beam, plate, and shell formulations, including geometrically exact models.
@@ -29,6 +23,13 @@ Open to research collaborations in computational mechanics, numerical methods, a
 - **Constitutive modelling** — smart materials, shape-memory behaviour, and thermo-viscoelasticity.
 - **Solver development** — implementation, verification, and assessment of numerical methods.
 - **Applications** — shape-changing structures, 4D printing.
+
+
+## Contact
+
+Open to research collaborations in computational mechanics, numerical methods, and scientific software development.
+
+[Email](mailto:farshad.civil.rhni@gmail.com) · [LinkedIn](https://www.linkedin.com/in/farshad-rahmani-58b71214b)
 
 ## Programming & Tools
 
