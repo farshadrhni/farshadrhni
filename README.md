@@ -22,7 +22,7 @@ I work in computational mechanics, developing numerical formulations and researc
 - **Numerical methods** — finite element and isogeometric analysis, with an emphasis on collocation methods.
 - **Constitutive modelling** — smart materials, shape-memory behaviour, and thermo-viscoelasticity.
 - **Solver development** — implementation, verification, and assessment of numerical methods.
-- **Applications** — shape-changing structures, 4D printing, and patient-specific stents.
+- **Applications** — shape-changing structures, 4D printing.
 
 ## Programming & Tools
 
