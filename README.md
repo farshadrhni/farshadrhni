@@ -44,5 +44,3 @@ Open to research collaborations in computational mechanics, numerical methods, a
 </p>
 
 <img src="./languages.svg" width="720" alt="Language distribution across public owned repositories">
-
-<sub>Chart percentages reflect detected code size, not proficiency. Private repositories and local code are not included.</sub>
