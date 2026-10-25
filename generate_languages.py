@@ -1,19 +1,18 @@
-"""Generate languages.svg: a donut chart of language usage across ALL of a
-user's repositories (public + private), built directly from the GitHub API.
+"""Generate languages.svg: a compact bar chart of language usage across public owned repositories of a
+user's repositories (public only), built directly from the GitHub API.
 
 Env vars:
-  GH_TOKEN  classic personal access token with `repo` scope (required)
+  GH_TOKEN  optional GitHub token for API rate limits
   GH_USER   GitHub username (default: farshadrhni)
 """
 import json
-import math
+from html import escape
 import os
 import sys
 import urllib.request
 
 USER = os.environ.get("GH_USER", "farshadrhni")
-EXCLUDE = {"HTML", "Jupyter Notebook"}   # edit to taste
-MAX_SLICES = 8                           # the rest are grouped as "Other"
+EXCLUDE = set()  # Show every detected language.
 OUT = "languages.svg"
 
 COLORS = {
@@ -28,69 +27,59 @@ FALLBACK = ["#fe428e", "#a9fef7", "#f8d847", "#9d7cf5", "#5ad1a3", "#ff9e64", "#
 
 def api(url):
     req = urllib.request.Request(url, headers={
-        "Authorization": f"Bearer {os.environ['GH_TOKEN']}",
         "Accept": "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
     })
+    if os.environ.get("GH_TOKEN"):
+        req.add_header("Authorization", "Bearer " + os.environ["GH_TOKEN"])
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.load(r)
 
 
 def collect():
-    totals, page = {}, 1
+    totals, page, count = {}, 1, 0
     while True:
-        repos = api("https://api.github.com/user/repos?affiliation=owner"
-                    f"&visibility=all&per_page=100&page={page}")
+        repos = api(f"https://api.github.com/users/{USER}/repos?type=owner&per_page=100&page={page}")
         if not repos:
             break
         for repo in repos:
-            if repo.get("fork") or repo["owner"]["login"].lower() != USER.lower():
+            if repo.get("private") or repo.get("fork") or repo["owner"]["login"].lower() != USER.lower():
                 continue
+            count += 1
             for lang, size in api(repo["languages_url"]).items():
                 totals[lang] = totals.get(lang, 0) + size
         page += 1
+    print(f"Scanned {count} public owned non-fork repositories; {len(totals)} languages.")
     return totals
 
 
 def render(totals):
-    items = sorted(((k, v) for k, v in totals.items() if k not in EXCLUDE),
-                   key=lambda kv: -kv[1])
-    total = sum(v for _, v in items) or 1
-    top, rest = items[:MAX_SLICES], items[MAX_SLICES:]
-    if rest:
-        top.append(("Other", sum(v for _, v in rest)))
-
-    cx, cy, R, r = 110, 115, 80, 48
-    paths, legend, angle = [], [], -math.pi / 2
-    for i, (name, size) in enumerate(top):
-        frac = size / total
+    items = sorted(((k, v) for k, v in totals.items() if v > 0),
+                   key=lambda kv: (-kv[1], kv[0]))
+    total = sum(v for _, v in items)
+    height = 130 + 30 * ((len(items) + 1) // 2)
+    parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="720" height="{height}" viewBox="0 0 720 {height}" role="img" aria-labelledby="title desc">',
+             '<title id="title">Repository languages</title>',
+             '<desc id="desc">Share of detected code bytes in public owned, non-fork repositories.</desc>',
+             '<style>text{font-family:Segoe UI,Arial,sans-serif;fill:#24292f}.muted{fill:#57606a;font-size:12px}@media(prefers-color-scheme:dark){text{fill:#e6edf3}.muted{fill:#9da7b3}}</style>',
+             '<text x="16" y="28" font-size="17" font-weight="600">Repository languages</text>',
+             '<text x="16" y="49" class="muted">Detected code by size · accessible owned repositories · forks excluded</text>']
+    x = 16.0
+    for i, (name, size) in enumerate(items):
         color = COLORS.get(name, FALLBACK[i % len(FALLBACK)])
-        if frac >= 0.9999:
-            paths.append(f'<circle cx="{cx}" cy="{cy}" r="{(R + r) / 2}" fill="none" '
-                         f'stroke="{color}" stroke-width="{R - r}"/>')
-        else:
-            a0, a1 = angle, angle + frac * 2 * math.pi
-            large = 1 if frac > 0.5 else 0
-            p = lambda rad, a: (cx + rad * math.cos(a), cy + rad * math.sin(a))
-            x0, y0 = p(R, a0); x1, y1 = p(R, a1)
-            x2, y2 = p(r, a1); x3, y3 = p(r, a0)
-            paths.append(f'<path d="M{x0:.2f},{y0:.2f} A{R},{R} 0 {large} 1 {x1:.2f},{y1:.2f} '
-                         f'L{x2:.2f},{y2:.2f} A{r},{r} 0 {large} 0 {x3:.2f},{y3:.2f} Z" fill="{color}"/>')
-        angle += frac * 2 * math.pi
-        y = 62 + i * 22
-        legend.append(
-            f'<rect x="235" y="{y - 10}" width="12" height="12" rx="3" fill="{color}"/>'
-            f'<text x="255" y="{y}" class="t">{name}</text>'
-            f'<text x="440" y="{y}" class="t" text-anchor="end">{frac * 100:.1f}%</text>')
-
-    height = max(230, 62 + len(top) * 22 + 20)
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="495" height="{height}" viewBox="0 0 495 {height}">
-<style>.t{{font:400 13px 'Segoe UI',Ubuntu,Sans-Serif;fill:#a9fef7}}.h{{font:600 18px 'Segoe UI',Ubuntu,Sans-Serif;fill:#fe428e}}</style>
-<rect x="0.5" y="0.5" width="494" height="{height - 1}" rx="4.5" fill="#141321"/>
-<text x="25" y="35" class="h">Most Used Languages</text>
-{''.join(paths)}
-{''.join(legend)}
-</svg>'''
+        width = 688 * size / total
+        parts.append(f'<rect x="{x:.4f}" y="66" width="{width:.4f}" height="12" fill="{color}"/>')
+        x += width
+        lx, ly = 16 + (i % 2) * 350, 107 + (i // 2) * 30
+        pct = size / total * 100
+        share = "&lt;0.1%" if pct < 0.1 else f"{pct:.1f}%"
+        parts.append(f'<circle cx="{lx+5}" cy="{ly-4}" r="5" fill="{color}"/>'
+                     f'<text x="{lx+18}" y="{ly}" font-size="13">{escape(name)}</text>'
+                     f'<text x="{lx+320}" y="{ly}" font-size="13" text-anchor="end">{share}</text>')
+    if not items:
+        parts.append('<text x="16" y="105" class="muted">No language data available.</text>')
+    parts.append('</svg>')
+    return "".join(parts)
 
 
 def render_html(totals, svg):
@@ -100,7 +89,7 @@ def render_html(totals, svg):
                    key=lambda kv: -kv[1])
     total = sum(v for _, v in items) or 1
     rows = "".join(
-        f"<tr><td>{name}</td><td>{size:,}</td><td>{size / total * 100:.2f}%</td></tr>"
+        f"<tr><td>{escape(name)}</td><td>{size:,}</td><td>{size / total * 100:.2f}%</td></tr>"
         for name, size in items)
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
@@ -113,7 +102,7 @@ h1{{font-size:20px}} table{{border-collapse:collapse;width:100%;margin-top:16px}
 th,td{{padding:6px 10px;border-bottom:1px solid #30363d;text-align:left}}
 td:nth-child(n+2),th:nth-child(n+2){{text-align:right}}
 </style></head><body><main>
-<h1>Language usage across all repositories (public and private)</h1>
+<h1>Language usage across accessible owned repositories</h1>
 {svg}
 <table><tr><th>Language</th><th>Bytes</th><th>Share</th></tr>{rows}</table>
 <p style="color:#8b949e">Updated automatically from the GitHub API.</p>
@@ -123,10 +112,11 @@ td:nth-child(n+2),th:nth-child(n+2){{text-align:right}}
 if __name__ == "__main__":
     data = collect()
     if not data:
-        sys.exit("No language data returned; check token scope.")
+        sys.exit("No public repository language data returned.")
     svg = render(data)
     with open(OUT, "w", encoding="utf-8") as f:
         f.write(svg)
     with open("languages.html", "w", encoding="utf-8") as f:
         f.write(render_html(data, svg))
     print("Wrote", OUT, "and languages.html")
+
